@@ -1,10 +1,10 @@
-## Network Delay Simulation Using Socket Programming
+# Network Delay Simulation Using Socket Programming
 
-# Overview
+## Overview
 
 This project simulates a distributed network system that calculates the shortest path between nodes in a network and determines the transmission delay. It utilizes socket programming in C with both TCP and UDP protocols for communication between different components.
 
-# Components
+## Components
 
 The system consists of four key components:
 
@@ -16,7 +16,7 @@ AWS (Advanced Web Server): Acts as the intermediary, forwarding data between the
 
 Client: Sends a request for shortest path and delay calculations and receives the final results.
 
-File Structure
+## File Structure
 
 serverA.c - Implements shortest path computation using Dijkstra’s algorithm.
 
@@ -28,7 +28,7 @@ client.c - Sends requests and receives results.
 
 map.txt - Contains predefined network maps with nodes, edges, and transmission properties.
 
-Communication Flow
+## Communication Flow
 
 Client to AWS (TCP): The client sends a request with a map ID, source node, and file size.
 
@@ -42,7 +42,7 @@ Server B to AWS (UDP): Server B computes and returns delay values.
 
 AWS to Client (TCP): AWS consolidates the data and sends the final result back to the client.
 
-Installation & Compilation
+## Installation & Compilation
 
 Clone the repository or download the source files.
 
@@ -53,7 +53,7 @@ gcc -o serverB serverB.c
 gcc -o aws aws.c
 gcc -o client client.c
 
-Execution Steps
+## Execution Steps
 
 Start Server A:
 
@@ -67,7 +67,7 @@ Start AWS:
 
 ./aws &
 
-Run Client with parameters:
+## Run Client with parameters:
 
 ./client <MapID> <SourceNode> <FileSize>
 
@@ -75,11 +75,11 @@ Example:
 
 ./client A 1 1000
 
-Expected Output
+## Expected Output
 
 The client receives the shortest paths and delay values for all reachable nodes and displays them in a structured format.
 
-Technologies Used
+## Technologies Used
 
 Programming Language: C
 
